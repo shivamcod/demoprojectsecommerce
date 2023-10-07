@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navigation{
+    font-family: var(--font-1);
+    height: 75px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+}
+
+.nav-left{
+    font-size: 25px;
+    display: flex;
+}
+
+.nav-left ul{
+    display: flex;
+    margin: 0 70px;
+    font-size: 20px;
+    align-items: center;
+}
+
+.nav-left ul li{
+    list-style: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-left ul li a{
+    text-decoration: none;
+    color: black;
+    font-family: var(--font-2);
+    margin: 0 30px;
+}
+
+.nav-left ul li a:hover{
+    color: var(--main-bg-color);
+    font-weight: bolder;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+}
+
+.content{
+    height: 100%;
+    font-family: var(--font-2);
+    display: flex;
+    /* background-color: rgb(208 208 243); */
+    position: relative;
+    padding: 25px 0;
+    margin-bottom: 45px;
+}
+
+.content::after{
+    content: "";
+    background-image: url(/image/home.webp);
+    position: absolute;
+    opacity: 0.20;
+    width: 100%;
+    height: inherit;
+    border-radius: 20px;
+}
+
+.content-left{
+    /* width: 50%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px;
+    z-index: 1;
+}
+
+
+.content-right{
+    /* width: 50%; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-right img{
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+    border-radius: 172px;
+    margin: 30px 30px 0 0;
+}
+
+.articles{
+    /* height: 60vh; */
+    /* background-color: rgb(255 253 253); */
+    background-color: rgb(233 233 233);
+    padding-top: 12px;
+    padding: 12px;
+}
+
+
+
+.articles a{
+    text-decoration: none;
+    color: black;
+}
+
+.article{
+    display: flex;
+    margin: 22px;
+}
+
+.article img{
+    height: 23vh;
+    width: 270px;
+    border-radius: 40px;  
+    /* width: 300px; */
+}
+
+.home-article-content{
+    align-self: center;
+    padding: 0 35px;
+}
+
+.footer{
+    height: 45px;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    flex-direction: column;
+    background-color: aqua;
+}
+
+.footer a{
+    color: black;
+}

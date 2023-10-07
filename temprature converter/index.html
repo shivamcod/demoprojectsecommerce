@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temprature Converter</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            padding: 50px 100px;
+        }
+
+        h1{
+            text-align: center;
+        }
+
+        #container{
+            text-align: center;
+            background-color: aquamarine;
+            padding: 50px;
+            margin-top: 25px;
+            box-shadow: 0px 0px 19px grey;
+        }
+
+        .input-div{
+            display: inline-block;
+        }
+
+        .inp{
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+            text-align: center;
+        }
+
+        .input-div label{
+            font-size: 27px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Temprature Converter</h1>
+    <div id="container">
+        <div class="input-div">
+            <label>Celcius</label><br>
+            <input type="number" value="0" id="cel" class="inp">
+        </div>
+        <div class="input-div">
+            <label>Fahrenheit</label><br>
+            <input type="number" value="32" id="far" class="inp">
+        </div>
+    </div>
+
+    <script>
+        let celc = document.getElementById('cel');
+        let fahr = document.getElementById('far');
+
+        celc.addEventListener('input', function(){
+            let c = this.value;
+            let f =(c * 9/5)+32;
+            if(!Number.isInteger(f)){
+                f = f.toFixed(4);
+            }
+            fahr.value = f;
+        });
+
+        fahr.addEventListener('input', function(){
+            let f = this.value;
+            let c = (f-32)*5/9;
+            if(!Number.isInteger(c)){
+                c = c.toFixed(4);
+            }
+            celc.value = c;
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&family=Roboto&display=swap');
+:root{
+    --main-bg-color: brown;
+    --font-1: 'Roboto', sans-serif;
+    --font-2: 'Lato', sans-serif;
+}
+
+.center{
+    text-align: center;
+}
+
+.max-width-1{
+    max-width: 80vw;
+}
+
+.max-width-2{
+    max-width: 60vw;
+}
+
+.m-auto{
+    margin: auto;
+}
+
+.my-2{
+    margin-top: 32px;
+}
+
+.font-1{
+    font-family: var(--font-1);
+}
+
+.font-2{
+    font-family: var(--font-2);
+}
+
+.btn{
+    padding: 3px 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-family: var(--font-2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn:hover{
+    color: white;
+    background-color: var(--main-bg-color);
+}
+
+.form-input{
+    padding: 3px 5px;
+    font-size: 14px;
+    border: 2px solid black;
+    border-radius: 4px;
+    margin: 0 8px;
+    font-family: var(--font-1);
+}
+
+.form-box input, textarea{
+    width: 40vw;
+    padding: 2px 7px;
+    margin: 7px;
+    border: 1px solid rgb(129, 136, 164);
+    border-radius: 3px;
+    /* border: none; */
+    font-size: 19px;
+    font-family: var(--font-2);
+}

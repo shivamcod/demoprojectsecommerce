@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main {
+            width: 100%;
+            height: 100vh;
+            background-color: aquamarine;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .box {
+            background-color: white;
+            min-height: 500px;
+            width: 700px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        #item {
+            width: 100%;
+            border: 0;
+            outline: 0;
+            box-shadow: 0 0 2.5px grey;
+            padding: 10px;
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #to-do-box {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        #to-do-box li {
+            padding: 10px;
+            position: relative;
+            background-color: #afc9e3;
+            color: white;
+            border-radius: 2px;
+            padding-right: 30px;
+            text-align: justify;
+            margin-top: 10px;
+            user-select: none;
+        }
+
+        #to-do-box li i {
+            right: 10px;
+            position: absolute;
+            color: black;
+        }
+
+        .done {
+            text-decoration: line-through;
+            color: black;
+            background-color: #95a5a6 !important;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="box">
+            <input type="text" id="item" placeholder="Write Something Here......" autofocus>
+
+            <ul id="to-do-box">
+                <li>Create a game and song
+                    <i class="fa-sharp fa-solid fa-xmark"></i>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script>
+        const item = document.getElementById("item");
+        const todolist = document.getElementById("to-do-box");
+
+        item.addEventListener("keyup", function (event) {
+            if (event.key == "Enter") {
+                addtodo(this.value);
+                this.value = "";
+            }
+        })
+
+        const addtodo = (item) => {
+            const listitem = document.createElement("li");
+            listitem.innerHTML = `
+            ${item} 
+            <i class="fa-sharp fa-solid fa-xmark"></i>
+            `;
+
+            listitem.addEventListener("click", function () {
+                this.classList.toggle("done");
+            });
+
+            listitem.querySelector("i").addEventListener("click", function () {
+                listitem.remove();
+            })
+
+            todolist.appendChild(listitem);
+        }
+
+    </script>
+
+    <script src="https://kit.fontawesome.com/1666a109bf.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

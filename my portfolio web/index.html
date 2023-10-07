@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Shivam Kumar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p> Full Stack Developer </p>
+                <h1> Hi, I'm <span>Shivam</span> <br> Kumar From India </h1>
+            </div>
+        </div>
+    </div>
+
+    <!-- -------------------------------------- ABOUT ----------------------------------------------------------------------------------- -->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 id="sub-title"> About Me </h1>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis dolore, quaerat
+                        necessitatibus quis iure doloremque ipsam id sed fugiat accusantium error ratione ea libero.
+                        Enim itaque praesentium accusantium, nostrum repudiandae facere excepturi ex illum corrupti
+                        animi dolore nam sit veritatis. Asperiores dignissimos nesciunt nulla officia assumenda
+                        voluptates vero, eveniet facere totam, quite. </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')"> Skills </p>
+                        <p class="tab-links" onclick="opentab('experience')"> Experience </p>
+                        <p class="tab-links" onclick="opentab('education')"> Education </p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end Development</span><br>HTML, CSS and JavaScript</li>
+                            <li><span>Back-end Development</span><br>Python and JavaScript</li>
+                            <li><span>Database</span><br>SQL</li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022 - Current</span><br> Web Developer in Accuratics Softwares Pvt. Ltd.</li>
+                            <li><span>2021 - 2022</span><br> Python developer as a Intern </li>
+                            <li><span>2019-2021</span><br> Database Engineer in ITC Learing Group </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2017</span><br>10th passed in U.P Board</li>
+                            <li><span>2019</span><br>12th passed in U.P Board</li>
+                            <li><span>2019-2023</span><br>B.tech from AKTU University, Lucknow</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

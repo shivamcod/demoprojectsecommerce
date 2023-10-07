@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form validation</title>
+    <style> 
+        form{
+            padding: 30px 30px;
+        }
+        .form-design{
+            margin: 0px 0px 25px 0px;
+        }
+        .form-design input{
+            width: 400px;
+        }
+        .error{
+            color: red;
+            margin-left: 20px;
+        }
+        .btn{
+            width: 85px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form action="" onsubmit="return validateform()">
+        <h1>Welcome to form with fully validation</h1>
+        <div class="form-design">
+            Name : <input type="text"  id="name" name="fname"><span id="name-error" class="error"><b></b></span>
+        </div>
+        <div class="form-design" >
+            Email : <input type="email" id="email" name="femail"><span id="mail-error" class="error"><b></b></span>
+        </div>
+        <div class="form-design" >
+            Phone : <input type="phone" id="phone" name="fphone"><span id="phone-error" class="error"><b></b></span>
+        </div>
+        <div class="form-design" >
+            Password : <input type="password" id="password" name="fpassword"><span id="password-error" class="error"><b></b></span>
+        </div>
+        <div class="form-design">
+            Confirm Password : <input type="password"  id="cpassword" name="fcpassword"><span id="cpass--error" class="error"><b></b></span>
+        </div>
+
+        <input type="submit"class="btn" value="button">
+    </form>
+
+    <script>
+        let name = document.getElementById('name');
+        let email = document.getElementById('email');
+        let phone = document.getElementById('phone');
+        let password = document.getElementById('password');
+        let confirmpassword = document.getElementById('cpassword');
+
+        function validateform(){
+            if(name.value == ""){
+                document.getElementById('name-error').innerHTML = "* Input field is empty"
+            }else if(name.value.length < 8){
+                document.getElementById('name-error').innerHTML = "* Input field is required minimum 8 character"
+            }else{
+                document.getElementById('name-error').innerHTML = ""
+            }
+
+            if(email.value == ""){
+                document.getElementById('mail-error').innerHTML = "* Input field is empty"
+            }else{
+                document.getElementById('mail-error').innerHTML = ""
+            }
+
+            if(phone.value == ""){
+                document.getElementById('phone-error').innerHTML = "* Input field is empty"
+            }else if(phone.value.length < 13){
+                document.getElementById('phone-error').innerHTML = "* Mobile number has filled in 10 digits"
+            }else{
+                document.getElementById('phone-error').innerHTML = ""
+            }
+
+            if(password.value == ""){
+                document.getElementById('password-error').innerHTML = "* Input field is empty"
+            }else{
+                document.getElementById('password-error').innerHTML = ""
+            }
+
+            if(confirmpassword.value == ""){
+                document.getElementById('cpass--error').innerHTML = "* Input field is empty"
+            }else if(password.value !== confirmpassword.value){
+                document.getElementById('cpass--error').innerHTML = "password has a no match";
+            }
+            else{
+                document.getElementById('cpass--error').innerHTML = ""
+            }
+
+            return false;
+        }
+
+
+    </script>
+</body>
+</html>

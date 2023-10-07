@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.logo{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo img{
+    width: 50%;
+    height: 50%;
+    border: 3px solid white;
+    border-radius: 50px;
+}
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    cursor: pointer;
+
+}
+.nav-list{
+    width: 50%;
+    /* background-color: black; */
+    display: flex;
+    align-items: center;
+}
+.nav-list li{
+    list-style: none;
+    padding: 26px 30px;
+
+}
+.nav-list li a{
+    text-decoration: none;
+    color: white  ;
+
+}
+.nav-list li a:hover{
+    color: grey;
+}
+.rightNav{
+    /* background-color: blueviolet; */
+    width: 50%;
+    text-align: right;
+    padding: 0 23px;
+}
+
+#search{
+    padding: 5px;
+    font-size: 17px;
+    border: 2px solid grey;
+    border-radius: 9px;
+}
+
+.background{
+    background: rgba(0, 0, 0, 0.7) url('OIP\ \(1\).jpg');
+    background-size: cover;
+    background-blend-mode: darken;
+}
+
+.box-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    max-width: 50%;
+    margin: auto;
+    height: 80%;
+
+}
+.secondhalf img{
+    width: 90%;
+    border: 2px solid white;
+    border-radius: 150px;
+    display: block;
+    margin: auto;
+
+    
+}
+.firstsection{
+    height: 100vh;
+
+}
+.firsthalf{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.secondhalf{
+    width: 30%;
+}
+
+.text-big{
+    font-size: 39px;
+}
+
+.text-small{
+    font-size: 18px;
+}
+
+.btn{
+    padding: 8px 20px;
+    margin: 7px 3px;
+    border: 2px solid white;
+    border-radius: 8px;
+    font-size: 18px;
+    background: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn-sm{
+    padding: 3px 10px;
+    vertical-align: middle;
+}
+
+.thumbimage{
+    width: 320px;
+    height: 330px;
+}
+.section{
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: 80%;
+    margin: auto;
+    font-family: 'Ubuntu', sans-serif;
+
+}
+.section-left{
+    flex-direction: row-reverse;
+
+}
+.paras{
+    padding: 0px 65px;
+}
+.sectionsubtag{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.form {
+    width: 250px;
+    height: 320px;
+    border-radius: 50px;
+    border: 5px solid orange;
+    text-align: center;
+    margin: -385px 293px 500px 1179px;
+
+}
+
+.form h2 {
+    color: white;
+}
+
+.link {
+    color: white;
+}
+.a{
+    color: white;
+}
+.liw{
+    color: white;
+}
+
+
+
+.contactform{
+    font-family: 'Ubuntu', sans-serif;
+    padding-top: 144px;
+    padding: 144px 55px;
+}
+
+.contactform h1 {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.contactform form div {
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+#emailHelp{
+    font-size: 11px;
+    color: rgb(4, 80, 33);
+    margin: 0 5px;
+}
+
+.contactform form div input{
+    width: 26vw;
+    border-radius: 5px;
+    margin: 6px 0 0 0;
+    padding: 3px;
+}
+
+
+
